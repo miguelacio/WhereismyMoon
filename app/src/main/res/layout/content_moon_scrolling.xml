@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.andresbolado.whereismymoon.MoonScrollingActivity"
+    tools:showIn="@layout/activity_moon_scrolling">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/phases"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/current_phase"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/current_phase"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/text_view_current_phase"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="12pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/until_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/phases"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/until"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/until"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/text_view_current_until"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textSize="12pt" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/so_where"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/until_layout"
+            android:gravity="center_horizontal"
+            android:text="@string/so_where_is_the_moon"
+            android:textSize="12pt" />
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="256dp"
+            android:layout_below="@+id/so_where"
+            android:layout_centerHorizontal="true">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/image_view_current_place"
+                android:layout_width="match_parent"
+                android:layout_height="256dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frame_layout"
+            android:paddingLeft="5dp"
+            android:text="@string/the_dark_place_is_where_the_moon_is"
+            android:textSize="12pt" />
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
