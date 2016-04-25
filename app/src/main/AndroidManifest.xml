@@ -12,7 +12,20 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MoonScrollingActivity"
+            android:label="@string/title_activity_moon_scrolling"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FactsActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/title_activity_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,19 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MoonScrollingActivity"
-            android:label="@string/title_activity_moon_scrolling"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:name=".MoonStoriesActivity"
+            android:label="@string/title_activity_moon_stories"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FactsActivity"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:name=".MoonStoryScrollingActivity"
+            android:label="@string/title_activity_moon_story_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
